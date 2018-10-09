@@ -19,7 +19,7 @@ class PlanetFall(MycroftSkill):
         self.current_room = None
         self.last_interaction = time.time()
         self._init_padatious()
-        self.disable_intent("save.intent")
+        self.disable_intent("Save")
         self.game_data = join(self.root_dir, 'planetfall.z5')
         self.frotz_path = expanduser("~/frotz/dfrotz")
 
@@ -74,7 +74,7 @@ class PlanetFall(MycroftSkill):
     @intent_file_handler("play.intent")
     def handle_play(self, message=None):
         self.playing = True
-        self.enable_intent("save.intent")
+        self.enable_intent("Save")
         if self.game is None:
             self.game = Frotz(self.game_data, interpreter=self.frotz_path, save_file=self.save_file)
         self.speak_output(self.game.get_intro())
@@ -97,6 +97,7 @@ class PlanetFall(MycroftSkill):
                 self.game = Frotz(self.game_data, interpreter=self.frotz_path, save_file=self.save_file)
             self.game.restore()
             self.speak_dialog("restore.game", {"name": game_name})
+            self.enable_intent("Save")
         else:
             self.speak_dialog("save.not.found")
             new_game = self.ask_yesno("new.game", {"name": game_name})
@@ -118,6 +119,9 @@ class PlanetFall(MycroftSkill):
                 self.game = None
 
     def do_command(self, utterance):
+        if self.game_ended():
+            self.speak_dialog("game.ended")
+            return
         room, description = self.game.do_command(utterance)
         self.speak_output(room)
         self.speak_output(description)

@@ -1,1 +1,1 @@
-pyfrotz==0.1.3
+pyfrotz>=0.1.3
