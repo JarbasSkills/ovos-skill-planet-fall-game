@@ -122,9 +122,16 @@ class PlanetFall(MycroftSkill):
         if self.game_ended():
             self.speak_dialog("game.ended")
             return
-        room, description = self.game.do_command(utterance)
-        self.speak_output(room)
-        self.speak_output(description)
+        # this may return empty string if the game ended
+        data = self.game.do_command(utterance)
+        if not data:
+            self.playing = False
+            return None
+        else:
+            room = data[0]
+            description = data[1]
+            self.speak_output(room)
+            self.speak_output(description)
         return room
 
     def converse(self, utterances, lang="en-us"):
