@@ -1,4 +1,2 @@
-play planet fall
-start planet fall
-i want to play planet fall
-launch planet fall
+(start|launch|play|frotz) (star cross|starcross)
+let's play (star cross|starcross)

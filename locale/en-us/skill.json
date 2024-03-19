@@ -1,0 +1,23 @@
+{
+  "skill_id": "ovos-skill-planet-fall-game.jarbasai",
+  "source": "https://github.com/JarbasSkills/ovos-skill-planet-fall-game",
+  "package_name": "ovos-skill-planet-fall",
+  "extra_plugins": {
+    "core": [],
+    "PHAL": [],
+    "listener": [],
+    "audio": [],
+    "media": [],
+    "gui": []
+  },
+  "icon": "http://infocom.elsewhere.org/gallery/planetfall/planetfall1.jpg",
+  "images": [],
+  "name": "Planet Fall",
+  "description": "\"Join the Patrol, and see the Galaxy!\" You took the poster's advice, bait and all, and marched right over to the recruitment station near your home on the backwater planet of Gallium.",
+  "examples": [
+    "play planet fall",
+    "save game",
+    "exit game"
+  ],
+  "tags": ["game", "adventure", "entertainment"]
+}
