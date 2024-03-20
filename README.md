@@ -47,6 +47,20 @@ Images of exotic worlds, strange and colorful aliens and Deep Space heroism had 
 * "save"
 * "resume planet fall
 
+## Trivia
+
+- First game created by Steve Meretzky after working as a tester for Infocom.
+
+## License and Source code
+
+The source code can be found [here](https://github.com/historicalsource/planetfall).  It is not considered to be under an open license.
+
+As far as I know, Activision have still not declared the games abandonware. 
+
+But I do not believe that it is in the spirit of copyright law that works of art drift into oblivion by unavailability. 
+ 
+The day the games are republished in their old glory, I will gladly remove the files from this repository. Until then, I hope they will be allowed to remain here so you can have fun playing them in a novel way.
+
 ## Credits 
 @JarbasAl
 
