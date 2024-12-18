@@ -19,5 +19,9 @@
     "save game",
     "exit game"
   ],
-  "tags": ["game", "adventure", "entertainment"]
+  "tags": [
+    "game",
+    "adventure",
+    "entertainment"
+  ]
 }
